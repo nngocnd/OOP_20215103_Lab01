@@ -1,7 +1,12 @@
+Question 1:
 Điều kiện option == JOptionPane.YES_OPTION ? "Yes" : "No
 Nếu user chọn Yes -> option = 0
 Nếu user chọn No -> option = 1
 Nếu user chọn Cancel -> option = 2
 --------------------------------------------------------
-Nếu users chọn "Cancel" -> tương đương với "No" 
 Điều kiện sẽ là đúng nếu user chọn YES, còn lại, mặc định sẽ là NO
+=> users chọn "Cancel" -> tương đương với "No" 
+
+Question 2:
+Customize.java
+
