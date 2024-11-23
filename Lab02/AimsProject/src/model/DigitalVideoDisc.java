@@ -85,6 +85,7 @@ public class DigitalVideoDisc {
         this.cost = cost;
     }
 
+
     public static int getNbDigitalVideoDiscs() {
         return nbDigitalVideoDiscs;
     }
@@ -92,5 +93,5 @@ public class DigitalVideoDisc {
     public int getId() {
         return id;
     }
-    
+ 
 }
