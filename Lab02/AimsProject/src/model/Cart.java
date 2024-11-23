@@ -38,4 +38,23 @@ public class Cart {
         }
         return TotalCost;
     }
+
+    public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList){
+        if (itemsOrdered.size() + dvdList.length <= MAX_NUMBERS_ORDERED){
+            for (DigitalVideoDisc disc : dvdList) {
+                itemsOrdered.add(disc);
+            }
+        } else {
+            System.out.println("The cart is full. Can not add entired list");
+        }
+    }
+
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2){
+        if (itemsOrdered.size() + 2 <= MAX_NUMBERS_ORDERED){
+            itemsOrdered.add(dvd1);
+            itemsOrdered.add(dvd2);
+        } else {
+            System.out.println("The cart is full. Can not add this two discs");
+        }
+    }
 }
