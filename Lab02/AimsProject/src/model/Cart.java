@@ -39,7 +39,6 @@ public class Cart {
         return TotalCost;
     }
 
- topic/method-overloading
     public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList){
         if (itemsOrdered.size() + dvdList.length <= MAX_NUMBERS_ORDERED){
             for (DigitalVideoDisc disc : dvdList) {
