@@ -1,4 +1,6 @@
-package model;
+package hust.soict.hedspi.aims.store;
+
+import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
 
 import java.util.ArrayList;
 

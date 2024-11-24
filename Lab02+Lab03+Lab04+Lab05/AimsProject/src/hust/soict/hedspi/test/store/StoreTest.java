@@ -1,7 +1,7 @@
-package test;
+package hust.soict.hedspi.test.store;
 
-import model.DigitalVideoDisc;
-import model.Store;
+import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+import hust.soict.hedspi.aims.store.Store;
 
 public class StoreTest {
     public static void main(String[] args) {
