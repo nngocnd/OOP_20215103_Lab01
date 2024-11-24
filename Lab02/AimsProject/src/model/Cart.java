@@ -57,4 +57,17 @@ public class Cart {
             System.out.println("The cart is full. Can not add this two discs");
         }
     }
+
+    public void printCart(){
+        float totalCost = 0;
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        for (DigitalVideoDisc dvd : itemsOrdered){
+            System.out.println(dvd.toString());
+            totalCost += dvd.getCost();
+        }
+        System.out.println("Total cost: " + totalCost);
+        System.out.println("***************************************************");
+    }
+
 }
