@@ -58,5 +58,15 @@ public class Cart {
         }
     }
 
-    /// sdkfalkdhsf
+    public void printCart(){
+        float totalCost = 0;
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        for (DigitalVideoDisc dvd : itemsOrdered){
+            System.out.println(dvd.toString());
+            totalCost += dvd.getCost();
+        }
+        System.out.println("Total cost: " + totalCost);
+        System.out.println("***************************************************");
+    }
 }
