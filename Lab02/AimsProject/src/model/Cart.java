@@ -70,4 +70,30 @@ public class Cart {
         System.out.println("***************************************************");
     }
 
+    public void searchById(int Id){
+        boolean found = false;
+        for (DigitalVideoDisc disc : itemsOrdered) {
+            if (disc.getId() == Id) {
+                found = true;
+                System.out.println(disc.toString());
+            }
+        }
+
+        if (found == false) {
+            System.out.println("No disc found with id: " + Id);
+        }
+    }
+
+    public void searchByTitle(String title){
+        boolean found = false;
+        for (DigitalVideoDisc disc : itemsOrdered) {
+            if (disc.isMatch(title)) {
+                found = true;
+                System.out.println(disc.toString());
+            }
+        }
+        if (found == false) {
+            System.out.println("No disc found with title: " + title);
+        } 
+    }
 }
