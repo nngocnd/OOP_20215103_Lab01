@@ -1,18 +1,18 @@
 package hust.soict.hedspi.aims.store;
 
-import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+import hust.soict.hedspi.aims.media.Book;
 
 import java.util.ArrayList;
 
 public class Store {
     private final static int CAPACITY = 5;
-    private ArrayList<DigitalVideoDisc> itemsInStore;
+    private ArrayList<Book.DigitalVideoDisc> itemsInStore;
 
     public Store (){
         itemsInStore = new ArrayList<>(CAPACITY);
     }
 
-    public void addDVD(DigitalVideoDisc dvd){
+    public void addDVD(Book.DigitalVideoDisc dvd){
         if (itemsInStore.size() < CAPACITY){
             itemsInStore.add(dvd);
             System.out.println(dvd.getTitle() + " has been added in the store.");

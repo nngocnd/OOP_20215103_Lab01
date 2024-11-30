@@ -1,19 +1,19 @@
 package hust.soict.hedspi.aims.cart;
 
-import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+import hust.soict.hedspi.aims.media.Book;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
-    private List<DigitalVideoDisc> itemsOrdered = new ArrayList<>();
+    private List<Book.DigitalVideoDisc> itemsOrdered = new ArrayList<>();
 
-    public List<DigitalVideoDisc> getItemsOrdered() {
+    public List<Book.DigitalVideoDisc> getItemsOrdered() {
         return itemsOrdered;
     }
 
-    public void addDigitalVideoDisc(DigitalVideoDisc disc){
+    public void addDigitalVideoDisc(Book.DigitalVideoDisc disc){
         if (itemsOrdered.size() < MAX_NUMBERS_ORDERED){
             itemsOrdered.add(disc);
             System.out.println("The disc has been added");
@@ -25,7 +25,7 @@ public class Cart {
         }
     }
 
-    public void removeDigitalVideoDisc (DigitalVideoDisc disc){
+    public void removeDigitalVideoDisc (Book.DigitalVideoDisc disc){
         if (itemsOrdered.remove(disc)) {
             System.out.println("The disc has been removed");
         } else {
@@ -35,15 +35,15 @@ public class Cart {
 
     public float totalCost() {
         float TotalCost = 0;
-        for (DigitalVideoDisc disc : itemsOrdered) {
+        for (Book.DigitalVideoDisc disc : itemsOrdered) {
             TotalCost += disc.getCost();
         }
         return TotalCost;
     }
 
-    public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList){
+    public void addDigitalVideoDisc(Book.DigitalVideoDisc[] dvdList){
         if (itemsOrdered.size() + dvdList.length <= MAX_NUMBERS_ORDERED){
-            for (DigitalVideoDisc disc : dvdList) {
+            for (Book.DigitalVideoDisc disc : dvdList) {
                 itemsOrdered.add(disc);
             }
         } else {
@@ -51,7 +51,7 @@ public class Cart {
         }
     }
 
-    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2){
+    public void addDigitalVideoDisc(Book.DigitalVideoDisc dvd1, Book.DigitalVideoDisc dvd2){
         if (itemsOrdered.size() + 2 <= MAX_NUMBERS_ORDERED){
             itemsOrdered.add(dvd1);
             itemsOrdered.add(dvd2);
@@ -64,7 +64,7 @@ public class Cart {
         float totalCost = 0;
         System.out.println("***********************CART***********************");
         System.out.println("Ordered Items:");
-        for (DigitalVideoDisc dvd : itemsOrdered){
+        for (Book.DigitalVideoDisc dvd : itemsOrdered){
             System.out.println(dvd.toString());
             totalCost += dvd.getCost();
         }
@@ -74,7 +74,7 @@ public class Cart {
 
     public void searchById(int Id){
         boolean found = false;
-        for (DigitalVideoDisc disc : itemsOrdered) {
+        for (Book.DigitalVideoDisc disc : itemsOrdered) {
             if (disc.getId() == Id) {
                 found = true;
                 System.out.println(disc.toString());
@@ -88,7 +88,7 @@ public class Cart {
 
     public void searchByTitle(String title){
         boolean found = false;
-        for (DigitalVideoDisc disc : itemsOrdered) {
+        for (Book.DigitalVideoDisc disc : itemsOrdered) {
             if (disc.isMatch(title)) {
                 found = true;
                 System.out.println(disc.toString());
