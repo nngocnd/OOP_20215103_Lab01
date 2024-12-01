@@ -65,4 +65,6 @@ public abstract class Media {
     public int hashCode() {
         return title != null ? title.hashCode() : 0;
     }
+
+    public abstract String toString();
 }

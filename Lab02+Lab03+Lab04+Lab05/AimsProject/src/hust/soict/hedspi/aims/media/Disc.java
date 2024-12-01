@@ -44,4 +44,8 @@ public class Disc extends Media{
     public void setLength(int length) {
         this.length = length;
     }
+
+    public String toString(){
+        return getId() + ". Disc - " + getTitle() + " - " + getCategory() + " - " + getDirector() + " - " + getLength() + ": " + getCost() + "$";
+    }
 }
