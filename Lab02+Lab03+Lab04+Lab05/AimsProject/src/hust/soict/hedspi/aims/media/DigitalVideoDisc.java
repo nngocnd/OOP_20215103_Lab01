@@ -28,14 +28,6 @@ public class DigitalVideoDisc extends Disc implements Playable{
         super.setId(nbDigitalVideoDiscs);
     }
 
-    public void setDirector(String director) {
-        super.setDirector(director);
-    }
-
-    public void setLength(int length) {
-        super.setLength(length);
-    }
-
     public static int getNbDigitalVideoDiscs() {
         return nbDigitalVideoDiscs;
     }

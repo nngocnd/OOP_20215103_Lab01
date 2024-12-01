@@ -10,6 +10,14 @@ public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
     private List<Media> itemsOrdered = new ArrayList<Media>();
 
+    public Cart(){
+
+    }
+
+    public Cart(List<Media> itemsOrdered) {
+        this.itemsOrdered = itemsOrdered;
+    }
+
     public List<Media> getItemsOrdered() {
         return itemsOrdered;
     }
