@@ -55,5 +55,14 @@ public abstract class Media {
         this.cost = cost;
     }
 
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (o == null || !(o instanceof Media)) return false;
+        Media media = (Media) o;
+        return this.title != null && this.title.equals(media.title);
+    }
 
+    public int hashCode() {
+        return title != null ? title.hashCode() : 0;
+    }
 }
