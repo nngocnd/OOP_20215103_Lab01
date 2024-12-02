@@ -4,6 +4,7 @@ import hust.soict.hedspi.aims.media.Book;
 import hust.soict.hedspi.aims.media.Media;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Cart {
@@ -46,6 +47,14 @@ public class Cart {
         } else {
             System.out.println(media.getTitle() + " is not exist. Cannot remove");
         }
+    }
+
+    public void sortByTitle(){
+        Collections.sort(itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+    }
+
+    public void sortByCost() {
+        Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
     }
 //    public void printCart(){
 //        System.out.println("***********************CART***********************");
