@@ -1,0 +1,10 @@
+1. What class should implement the Comparable interface?
+- Media class should be implemented the Comparable interface.
+2. In those classes, how should you implement the compareTo()method be to reflect the ordering that we want?
+- I'll compare one feature first, then another feature like in Media class, i have MediaCompareByCostTitle (compare cost then compare title). So, the code to implement the compareTo() method is in my MediaComparatorCostTitle class just change method name to Comparable.
+3.  Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+- No we can't. We use Comparable just for one default sorting like 'compare cost then compare title'. For example:
+// implement compareTo()
+Collections.sort(..) // It's default using compareTo() to sort.
+4. Suppose the DVDs has a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+- I will use Comparator overriding compare() method. Then compare each attribute respectively. (by title, then decreasing length, then cost)
