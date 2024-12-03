@@ -46,6 +46,6 @@ public class Disc extends Media{
     }
 
     public String toString(){
-        return getId() + ". Disc - " + getTitle() + " - " + getCategory() + " - " + getDirector() + " - " + getLength() + ": " + getCost() + "$";
+        return getId() + ". Disc - " + getTitle() + " - " + getCategory() + " - " + getDirector() + " - " + getLength() + "min: " + getCost() + "$";
     }
 }

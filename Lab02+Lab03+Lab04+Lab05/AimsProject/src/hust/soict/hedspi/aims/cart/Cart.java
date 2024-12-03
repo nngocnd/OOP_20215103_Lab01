@@ -56,41 +56,46 @@ public class Cart {
     public void sortByCost() {
         Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
     }
-//    public void printCart(){
-//        System.out.println("***********************CART***********************");
-//        System.out.println("Ordered Items:");
-//        for (Media item : itemsOrdered){
-//            System.out.println(dvd.toString());
-//            totalCost += dvd.getCost();
-//        }
-//        System.out.println("Total cost: " + this.totalCost());
-//        System.out.println("***************************************************");
-//    }
+    public void printCart(){
+        float totalCost = 0;
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        for (Media item : itemsOrdered){
+            System.out.println(item.toString());
+            totalCost += item.getCost();
+        }
+        System.out.println("Total cost: " + this.totalCost() + "$");
+        System.out.println("***************************************************");
+    }
 
-//    public void searchById(int Id){
-//        boolean found = false;
-//        for (Book.DigitalVideoDisc disc : itemsOrdered) {
-//            if (disc.getId() == Id) {
-//                found = true;
-//                System.out.println(disc.toString());
-//            }
-//        }
-//
-//        if (found == false) {
-//            System.out.println("No disc found with id: " + Id);
-//        }
-//    }
-//
-//    public void searchByTitle(String title){
-//        boolean found = false;
-//        for (Book.DigitalVideoDisc disc : itemsOrdered) {
-//            if (disc.isMatch(title)) {
-//                found = true;
-//                System.out.println(disc.toString());
-//            }
-//        }
-//        if (found == false) {
-//            System.out.println("No disc found with title: " + title);
-//        }
-//    }
+    public void clear() {
+        itemsOrdered.clear();
+    }
+
+    public void filterById(int Id){
+        boolean found = false;
+        for (Media media : itemsOrdered) {
+            if (media.getId() == Id) {
+                found = true;
+                System.out.println(media.toString());
+            }
+        }
+
+        if (found == false) {
+            System.out.println("No media found with id: " + Id);
+        }
+    }
+
+    public void filterByTitle(String title){
+        boolean found = false;
+        for (Media item : itemsOrdered) {
+            if (title.equalsIgnoreCase(item.getTitle())) {
+                found = true;
+                System.out.println(item.toString());
+            }
+        }
+        if (found == false) {
+            System.out.println("No media found with title: " + title);
+        }
+    }
 }

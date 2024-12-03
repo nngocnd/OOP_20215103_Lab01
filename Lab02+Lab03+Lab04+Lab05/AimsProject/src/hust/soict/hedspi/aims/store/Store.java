@@ -6,7 +6,7 @@ import hust.soict.hedspi.aims.media.Media;
 import java.util.ArrayList;
 
 public class Store {
-    private final static int CAPACITY = 5;
+    private final static int CAPACITY = 100;
     private ArrayList<Media> itemsInStore;
 
     public Store (){
@@ -29,5 +29,20 @@ public class Store {
         } else {
             System.out.println(media.getTitle() + " is not exist. Cannot remove");
         }
+    }
+
+    public void print(){
+        for (Media item : itemsInStore){
+            System.out.println(item.toString());
+        }
+    }
+
+    public Media searchByTitle(String title){
+        for (Media item : itemsInStore){
+            if (title.equalsIgnoreCase(item.getTitle())){
+                return item;
+            }
+        }
+        return null;
     }
 }
